@@ -1,0 +1,10 @@
+QPushButton
+{
+	height: 20;
+	width: 50;
+}
+
+QComboBox
+{
+	width: 50;
+}

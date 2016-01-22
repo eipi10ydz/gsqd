@@ -1,0 +1,5 @@
+C:\Users\ydz\学习\CS\语言\Python
+C:\Users\ydz\AppData\Local\Programs\Python\Python35
+C:\Users\ydz\学习\CS
+C:\Users\ydz\学习\数学
+C:\Users\ydz\学习\CS\语言\Python\documentation\Programming Python, 4th Edition.pdf

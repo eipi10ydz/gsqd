@@ -141,7 +141,7 @@ class mainWin(QtGui.QWidget):
     def addFile(self):
         line = str(QtGui.QFileDialog.getOpenFileName())
         line = line.replace('\\','/')
-        with open('./data/main.txt', 'r+', encoding = 'utf-8') as f:
+        with codecs.open('./data/main.txt', 'r+', 'utf-8') as f:
             res = f.read()
             if line in res.splitlines():
                 return
@@ -150,14 +150,14 @@ class mainWin(QtGui.QWidget):
             else:
                 f.write('\n')
             f.write(line)
-        with open('./data/main.txt', 'r', encoding = 'utf-8') as f:
+        with codecs.open('./data/main.txt', 'r', 'utf-8') as f:
             lineNum = len(f.read().splitlines()) - 1
         self.createPushButton(line, lineNum)
 
     def addDir(self):
         line = str(QtGui.QFileDialog.getExistingDirectory())
         line = line.replace('\\','/')
-        with open('./data/main.txt', 'r+', encoding = 'utf-8') as f:
+        with codecs.open('./data/main.txt', 'r+', 'utf-8') as f:
             res = f.read()
             if line in res.splitlines():
                 return
@@ -166,7 +166,7 @@ class mainWin(QtGui.QWidget):
             else:
                 f.write('\n')
             f.write(line)
-        with open('./data/main.txt', 'r', encoding = 'utf-8') as f:
+        with codecs.open('./data/main.txt', 'r', 'utf-8') as f:
             lineNum = len(f.read().splitlines()) - 1
         self.createPushButton(line, lineNum)
 
@@ -185,13 +185,13 @@ class mainWin(QtGui.QWidget):
         self.cnt = (self.cnt + 1) % 3
                     
     def delItem(self):
-        with open('./data/main.txt', 'r', encoding = 'utf-8') as f:
+        with codecs.open('./data/main.txt', 'r', 'utf-8') as f:
             res = f.read().splitlines()
         DelDialog(u'删除', res).exec_()
         for item in self.btnList:
             item[0].setParent(None)
             self.grid.removeWidget(item[0])
-        with open('./data/main.txt', 'r', encoding = 'utf-8') as f:
+        with codecs.open('./data/main.txt', 'r', 'utf-8') as f:
             res = f.read().splitlines()
             self.cnt = 0
             self.btnList = []

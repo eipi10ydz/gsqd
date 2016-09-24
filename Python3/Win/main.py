@@ -137,6 +137,8 @@ class mainWin(QtGui.QWidget):
     
     def addFile(self):
         line = str(QtGui.QFileDialog.getOpenFileName())
+        if not len(line):
+            return
         line = line.replace('/','\\')
         with open('./data/main.txt', 'r+', encoding = 'utf-8') as f:
             res = f.read()
@@ -153,6 +155,8 @@ class mainWin(QtGui.QWidget):
 
     def addDir(self):
         line = str(QtGui.QFileDialog.getExistingDirectory())
+        if not len(line):
+            return
         line = line.replace('/','\\')
         with open('./data/main.txt', 'r+', encoding = 'utf-8') as f:
             res = f.read()

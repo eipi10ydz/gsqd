@@ -1,5 +1,6 @@
 #-*- coding:utf-8 -*-
 
+import codecs
 import sys
 from PyQt4 import QtGui, QtCore
 
@@ -31,12 +32,12 @@ class DelDialog(QtGui.QDialog):
 	def react(self):
 		sender = self.sender()
 		if sender == self.okBtn:
-			res = str(self.combo.currentText())
+			res = unicode(self.combo.currentText().toLocal8Bit(), 'utf-8', 'ignore')
 			try:
 				del self.options[self.short.index(res)]
 			except ValueError:
 				pass
-			with open('./data/main.txt', 'w', encoding = 'utf-8') as f:
+			with codecs.open('./data/main.txt', 'w', 'utf-8') as f:
 				f.write('\n'.join(self.options))
 			self.done(1)
 		else:

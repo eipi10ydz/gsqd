@@ -122,7 +122,7 @@ class mainWin(QtGui.QWidget):
     def dropEvent(self, event):
         if event.mimeData().hasUrls():
             for url in event.mimeData().urls():
-                line = str(url.toLocalFile())
+                line = unicode(url.toLocalFile())
                 line = line.replace('\\','/')
                 with codecs.open('./data/main.txt', 'r+', 'utf-8') as f:
                     res = f.read()
@@ -139,7 +139,9 @@ class mainWin(QtGui.QWidget):
             event.acceptProposedAction()
     
     def addFile(self):
-        line = str(QtGui.QFileDialog.getOpenFileName())
+        line = unicode(QtGui.QFileDialog.getOpenFileName())
+        if not len(line):
+            return
         line = line.replace('\\','/')
         with codecs.open('./data/main.txt', 'r+', 'utf-8') as f:
             res = f.read()
@@ -155,7 +157,9 @@ class mainWin(QtGui.QWidget):
         self.createPushButton(line, lineNum)
 
     def addDir(self):
-        line = str(QtGui.QFileDialog.getExistingDirectory())
+        line = unicode(QtGui.QFileDialog.getExistingDirectory())
+        if not len(line):
+            return
         line = line.replace('\\','/')
         with codecs.open('./data/main.txt', 'r+', 'utf-8') as f:
             res = f.read()

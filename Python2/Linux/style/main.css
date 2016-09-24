@@ -1,0 +1,107 @@
+QPushButton
+{
+	background-repeat: no-repeat;
+	text-align: bottom;
+	height: 60;
+	width: 60;
+	margin: 2;
+}
+
+QPushButton:pressed
+{
+	border: solid 5px;
+	background-color: grey;
+}
+
+*[bat = "true"]
+{ 
+	background-image: url(./images/bat.png);
+}
+
+
+*[css = "true"]
+{ 
+	background-image: url(./images/css.png);
+}
+
+*[dir = "true"]
+{ 
+	background-image: url(./images/dir.png);
+}
+
+*[doc = "true"]
+{ 
+	background-image: url(./images/doc.png);
+}
+
+*[docx = "true"]
+{ 
+	background-image: url(./images/docx.png);
+}
+
+*[exe = "true"]
+{ 
+	background-image: url(./images/exe.png);
+}
+
+*[iso = "true"]
+{ 
+	background-image: url(./images/iso.png);
+}
+
+*[jpg = "true"]
+{ 
+	background-image: url(./images/jpg.png);
+}
+
+*[mp3 = "true"]
+{ 
+	background-image: url(./images/mp3.png);
+}
+
+*[pdf = "true"] 
+{ 
+	background-image: url(./images/pdf.png);
+}
+
+*[png = "true"]
+{ 
+	background-image: url(./images/png.png);
+}
+
+*[ppt = "true"]
+{ 
+	background-image: url(./images/ppt.png);
+}
+
+*[pptx = "true"]
+{ 
+	background-image: url(./images/pptx.png);
+}
+
+*[py = "true"]
+{ 
+	background-image: url(./images/py.png);
+}
+
+*[rar = "true"]
+{ 
+	background-image: url(./images/rar.png);
+}
+
+*[txt = "true"]
+{ 
+	background-image: url(./images/txt.png);
+}
+
+
+*[zip = "true"]
+{ 
+	background-image: url(./images/zip.png);
+}
+
+
+*[unknown = "true"]
+{ 
+	background-image: url(./images/unknown.png);
+}

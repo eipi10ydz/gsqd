@@ -1,0 +1,9 @@
+/media/root/OS/Users/ydz/学习/CS
+/media/root/OS/Users/ydz/学习/CS/语言/Python
+/root/learning/learnPython
+/root/learning/learnCpp
+/root/learning/learnCpp/ebook/C++  Primer中文版  第5版 [（美）李普曼，（美）拉乔伊，（美）默著][电子工业出版社][2013.08][838页].pdf
+/root/learning/操作系统/Operating System Concepts 9th Edition.pdf
+/media/root/OS/Users/ydz/学习/CS/操作系统原理与设计
+/media/root/OS/Users/ydz/学习/CS/计算机组成原理
+/media/root/OS/Users/ydz/学习/CS/算法导论
